@@ -1,0 +1,20 @@
+{
+  "eyebrow": "How we work",
+  "items": [
+    {
+      "title": "Advise",
+      "body": "We offer expert marketing advice. From 25+ years of experience, we guide and direct your business toward the results that matter most. Marketing strategy is our forte.",
+      "image": "images/jill-advise.jpg"
+    },
+    {
+      "title": "Train",
+      "body": "We bring that same experience into the classroom — virtual or in person — and deliver it with real enthusiasm and passion for the subject: marketing.",
+      "image": "images/jill-train.jpg"
+    },
+    {
+      "title": "Do",
+      "body": "Some agencies will only advise. We like to do — we roll up our sleeves and get on with it. When your marketing needs to be executed or outsourced, we're the agency for the job.",
+      "image": "images/jill-do.jpg"
+    }
+  ]
+}

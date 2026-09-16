@@ -1,0 +1,71 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Netlify Identity handles logins for the CMS — no extra sign-up flow needed.
+# Enable "Identity" + "Git Gateway" in the Netlify site dashboard, then
+# invite Jill/Giles as a user (see README.md for the full setup steps).
+
+publish_mode: simple
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "pages"
+    label: "Website content"
+    files:
+      - file: "content/hero.json"
+        label: "Hero (top banner)"
+        name: "hero"
+        fields:
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Subheading", name: "subhead", widget: "text" }
+          - { label: "Button text", name: "cta_label", widget: "string" }
+          - { label: "Button link (e.g. mailto:Info@LushMarketing.ie)", name: "cta_link", widget: "string" }
+
+      - file: "content/pillars.json"
+        label: "How we work (Advise / Train / Do)"
+        name: "pillars"
+        fields:
+          - { label: "Small label above the section", name: "eyebrow", widget: "string", required: false }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            min: 1
+            max: 3
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "body", widget: "text" }
+              - { label: "Photo", name: "image", widget: "image" }
+
+      - file: "content/approach.json"
+        label: "\"So, what can we do to help you?\" section"
+        name: "approach"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - label: "Paragraphs"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+      - file: "content/about.json"
+        label: "About us"
+        name: "about"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro paragraph", name: "intro", widget: "text" }
+          - { label: "Pull quote", name: "pull_quote", widget: "text" }
+          - label: "Paragraphs"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - { label: "Photo", name: "image", widget: "image" }
+
+      - file: "content/contact.json"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Body text", name: "body", widget: "text" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
